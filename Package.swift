@@ -7,7 +7,7 @@ let package = Package(
     name: "BBMetalImage",
     platforms: [.iOS(.v10)],
     products: [
-        .library(name: "BBMetalImage", targets: ["BBMetalImageSwift", "BBMetalImageObjC"]),
+        .library(name: "BBMetalImage", targets: ["BBMetalImageSwift", "BBMetalImageObjC", "BBMetalImageMetal"]),
     ],
     targets: [
         .target(
@@ -18,6 +18,10 @@ let package = Package(
         .target(
             name: "BBMetalImageObjC",
             path: "BBMetalImage/BBMetalImage/BBMetalImageObjC"
+        ),
+        .target(
+            name: "BBMetalImageMetal",
+            path: "BBMetalImage/BBMetalImage/BBMetalImageMetal"
         )
     ]
 )
