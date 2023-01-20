@@ -7,7 +7,7 @@
 //
 
 #include <metal_stdlib>
-#include "BBMetalShaderTypes.h"
+#include "../BBMetalImageObjC/BBMetalShaderTypes.h"
 using namespace metal;
 
 kernel void motionBlurKernel(texture2d<half, access::write> outputTexture [[texture(0)]],

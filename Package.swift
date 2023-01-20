@@ -7,13 +7,17 @@ let package = Package(
     name: "BBMetalImage",
     platforms: [.iOS(.v10)],
     products: [
-        .library(name: "BBMetalImage", targets: ["BBMetalImage"]),
+        .library(name: "BBMetalImage", targets: ["BBMetalImageSwift", "BBMetalImageObjC"]),
     ],
     targets: [
         .target(
-            name: "BBMetalImage",
-            path: "BBMetalImage/BBMetalImage",
+            name: "BBMetalImageSwift",
+            path: "BBMetalImage/BBMetalImage/BBMetalImageSwift",
             exclude: ["MultipleVideoSource.swift"]
+        ),
+        .target(
+            name: "BBMetalImageObjC",
+            path: "BBMetalImage/BBMetalImage/BBMetalImageObjC"
         )
     ]
 )
